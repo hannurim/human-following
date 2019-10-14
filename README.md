@@ -11,7 +11,7 @@ Third, The vector of ***total_p*** have data likely to be person. If the distanc
 
     GOAL = (LEG1.CENTER + LEG2.CENTER) / 2
     
-Fourth, The class of ***p*** has one of the closest totap_p data values. Update occurs when the previous value are not different up to 50cm.
+Fourth, The class of ***p*** has one of the closest ***total_p*** data values. Update occurs when the previous value are not different up to 50cm.
 
 You can control forward velocity(F_VEL) and rotate velocity(R_VEL).
 All you have to do is roslaunch turtlebot3_bringup and rosrun this code.
