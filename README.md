@@ -15,3 +15,7 @@ Fourth, The class of ***p*** has one of the closest ***total_p*** data values. U
 
 You can control forward velocity(F_VEL) and rotate velocity(R_VEL).
 All you have to do is roslaunch turtlebot3_bringup and rosrun this code.
+
+Remove Segmentation Fault :
+Segmentation fault is occurred when 2D Lidar have no data.
+So, Clear the vectors only when the vectors is not empty.(2019.10.18)
