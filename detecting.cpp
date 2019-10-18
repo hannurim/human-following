@@ -91,9 +91,9 @@ void sensorCallback(const sensor_msgs::LaserScan::ConstPtr& msg)
     }
     cout << "p.goal.x = " << p.goal.first << "\t";
     cout << "p.goal.y = " << p.goal.second << endl;
-    raw_data.clear();
-    clustered.clear();
-    total_p.clear();
+    if (!raw_data.empty()) raw_data.clear();
+    if (!clustered.empty()) clustered.clear();
+    if (!total_p.empty()) total_p.clear();
 }
 
 void GettingHuman()
@@ -103,7 +103,7 @@ void GettingHuman()
         velOutput.angular.z = R_VEL;
     else if (p.goal.first > 0.05)
         velOutput.angular.z = -1 * R_VEL;
-    if (p.goal.second > 0.3 && p.goal.second < 0.4) // if the length of feature is up to 20cm and under 30cm
+    if (p.goal.second > 0.3 && p.goal.second < 0.4)
     {
         ROS_INFO("STOP");
         velOutput.linear.x = 0;
