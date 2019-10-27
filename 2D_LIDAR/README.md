@@ -1,4 +1,4 @@
-# Human Following
+# Human Following using 2D Lidar
 Operates turtlebot3 in ROS
 
 I used 2D Lidar.
