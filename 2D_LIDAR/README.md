@@ -16,6 +16,14 @@ Fourth, The class of ***p*** has one of the closest ***total_p*** data values. U
 You can control forward velocity(F_VEL) and rotate velocity(R_VEL).
 All you have to do is roslaunch turtlebot3_bringup and rosrun this code.
 
-Remove Segmentation Fault :
+Remove Segmentation Fault(2019.10.18) :
 Segmentation fault is occurred when 2D Lidar have no data.
-So, Clear the vectors only when the vectors is not empty.(2019.10.18)
+So, Clear the vectors only when the vectors is not empty.
+
+Add Several Algorithm(2019.11.20) : 
+1. Use Smoothing filter for smooth driving.
+2. Do not drive until a person is detected 0.4m ahead.
+3. New tracking algorithm : The list of ***p_list*** has value within 0.3m around the existing value.
+Update to the nearest value in the list.
+4. Method to reduce noise : Real new goal = Previous goal * Weight + New goal * (1 - Weight)
+5. Initialize the value if no person is found for 10 seconds
